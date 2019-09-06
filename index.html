@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        body {
+            height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #e6e6e6;
+            padding: 20px 0;
+        }
+
+        .communication-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .communication-wrapper>.name {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .communication-wrapper>.name>h2 {
+            margin-bottom: 10px;
+        }
+
+        .communication-wrapper>.communications>.row>span {
+            display: inline-block;
+            width: 250px;
+            vertical-align: middle;
+        }
+
+        .communication-wrapper>.communications>.row>span>svg {
+            margin-right: 5px;
+        }
+
+        .sideBar {
+            background-color: #fbd12a;
+            position: fixed;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 60px 20px;
+            box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.75);
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sideBar>.pic {
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+        }
+
+        .sideBar>.personalInformation {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sideBar>.personalInformation>.title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .sideBar>.personalInformation>span:not(.title) {
+            margin-left: 2em;
+        }
+
+        .sideBar>button {
+            background-color: #e6e6e6;
+            padding: 5px 10px;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+
+        .sideBar>button:hover {
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 10px;
+            margin-left: 320px;
+        }
+
+        main>.skills>h2 {
+            margin-top: 50px;
+        }
+
+        main>.skills>svg {
+            margin-top: 50px;
+            color: #14A697;
+        }
+
+        main>.skills>p {
+            margin-left: 2em;
+        }
+
+        main>.skills>div>svg {
+            color: #14A697;
+        }
+
+        main>.skills>div>.pic {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        main>.skills>div>svg {
+            margin-top: 50px;
+        }
+
+        main>.skills>div>img {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        main>.skills>div>.keywords>span {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="communication-wrapper">
+            <div class="name">
+                <h2>陈敏佳</h2>
+                <span>求职意向：前端工程师</span>
+            </div>
+            <div class="communications">
+                <div class="row">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#i-email"></use>
+                        </svg>
+                        <span>314081655@qq.com</span>
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#i-phone"></use>
+                        </svg>
+                        <span>17826836096</span>
+                    </span>
+                </div>
+                <div class="row">
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#i-github"></use>
+                        </svg>
+                        <a href="http://github.com/cmokj">https://github.com/cmokj</a>
+                    </span>
+                    <span>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#i-blog"></use>
+                        </svg>
+                        <a href="https://cmokj.github.io">https://cmokj.github.io</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="skills">
+            <h2>技能描述</h2>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#i-item"></use>
+            </svg>
+            <span class="title">移动端页面</span>
+            <p>▫ 会使用 REM、媒体查询和 vw/vh 等技术制作适配手机的页面</p>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#i-item"></use>
+            </svg>
+            <span class="title">React</span>
+            <p>▫ 有使用 React 独立开发项目的经验，理解组件、生命周期、虚拟 DOM 等概念,掌握 React 实现组件通信的方式。</p>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#i-item"></use>
+            </svg>
+            <span class="title">HTML5 & CSS3 & JavaScript</span>
+            <p>▫ 掌握 HTML 语义化标签，如 nav、canvas 和 time 等</p>
+            <p>▫ 掌握 CSS3 动画、过渡、弹性盒子布局和媒体查询等响应式常用技术</p>
+            <p>▫ 能使用原生 JS 独立制作网页</p>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#i-item"></use>
+            </svg>
+            <span class="title">其他</span>
+            <p>▫ 掌握 HTTP 协议，了解浏览器缓存机制</p>
+            <p>▫ 了解 Webpack 基本配置</p>
+            <h2>项目经验</h2>
+            <div class="todoList">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#i-item"></use>
+                </svg>
+                <span>todoList</span>
+                <img src="./img/todolist.jpg" alt="todoList">
+                <p class="keywords">关键字：<span>React、React Native、npm、iconfont、SVG</span></p>
+                <p>源码链接：<a
+                        href="https://github.com/cmokj/todolist-project">https://github.com/cmokj/todolist-project</a>
+                </p>
+                <p>预览链接：<a
+                        href="https://cmokj.github.io/todolist-project/build/#">https://cmokj.github.io/todolist-project/build/#</a>
+                </p>
+                <p>项目描述： 这个项目是由 React 构建的在线待办事项管理系统，通过 Create React App
+                    构建。功能分为帐号的登入/注册、使用邮箱找回账号、任务的添加/完成/重要标记/删除/任务列表的切换几大版块。后台使用 LeanCloud 数据存储 API。</p>
+            </div>
+            <div class="resume">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#i-item"></use>
+                </svg>
+                <span>简历生成器</span>
+                <img src="./img/resume.jpg" alt="resume">
+                <p class="keywords">关键字：<span>JavaScript、CSS3、Markdown</span></p>
+                <p>源码链接：<a
+                        href="https://github.com/cmokj/animating-resume-demo">https://github.com/cmokj/animating-resume-demo</a>
+                </p>
+                <p>预览链接：<a
+                        href="https://cmokj.github.io/animating-resume-demo/index.html">https://cmokj.github.io/animating-resume-demo/index.html</a>
+                </p>
+                <p>项目描述：这个项目实现了一个 Markdown 简历的制作过程，用 CSS3 实现动画、过渡、阴影和弹性布局等效果。</p>
+            </div>
+            <div class="chopper">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#i-item"></use>
+                </svg>
+                <span>画一只可爱的乔巴</span>
+                <img src="./img/chopper.jpg" alt="chopper">
+                <p class="keywords">关键字：<span>CSS3、动画、过渡</span></p>
+                <p>源码链接：<a
+                        href="https://github.com/cmokj/chopper-css-demo">https://github.com/cmokj/chopper-css-demo</a>
+                </p>
+                <p>预览链接：<a
+                        href="https://cmokj.github.io/chopper-css-demo/index.html">https://cmokj.github.io/chopper-css-demo/index.html</a>
+                </p>
+                <p>项目描述：这个项目展示用 CSS 画的乔巴,用 CSS3 实现动画、过渡、阴影和弹性布局等效果。</p>
+            </div>
+            <div class="canvas">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#i-item"></use>
+                </svg>
+                <span>小画板</span>
+                <img src="./img/canvas.jpg" alt="canvas">
+                <p class="keywords">关键字：<span>移动端、HTML5、canvas、ES6</span></p>
+                <p>源码链接：<a href="https://github.com/cmokj/canvas-demo">https://github.com/cmokj/canvas-demo</a>
+                </p>
+                <p>预览链接：<a
+                        href="https://cmokj.github.io/canvas-demo/index.html">https://cmokj.github.io/canvas-demo/index.html</a>
+                </p>
+                <p>项目描述：使用 HTML5 的 canvas 元素及其相关 API,实现一个具有多选颜色、橡皮擦、一键清空、保存素材至本地的多功能画板，同时适配移动端。</p>
+            </div>
+            <div class="nav">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#i-item"></use>
+                </svg>
+                <span>导航首页</span>
+                <img src="./img/nav.jpg" alt="nav">
+                <p class="keywords">关键字：<span>HTML、CSS</span></p>
+                <p>源码链接：<a
+                        href="https://github.com/cmokj/navigationSite-demo">https://github.com/cmokj/navigationSite-demo</a>
+                </p>
+                <p>预览链接：<a
+                        href="https://cmokj.github.io/navigationSite-demo/index.html">https://cmokj.github.io/navigationSite-demo/index.html</a>
+                </p>
+                <p>项目描述：这个项目制作是一个可以用于首页的导航网页，用户可以通过键盘按键直接跳转到对应网页，并且可以任意修改添加网址。</p>
+            </div>
+        </div>
+    </main>
+    <div class="sideBar">
+        <div class="pic">照片占位</div>
+        <div class="personalInformation">
+            <span class="title">个人信息</span>
+            <span>姓&emsp;&emsp;名：陈敏佳</span>
+            <span>性&emsp;&emsp;别：女</span>
+            <span>籍&emsp;&emsp;贯：浙江绍兴</span>
+            <span>出生年月：1996年7月</span>
+            <span class="title">教育背景</span>
+            <span>学校名称：浙江传媒学院</span>
+            <span>所学专业：广播电视工程</span>
+            <span>就读时间：2014年9月-2018年6月</span>
+            <span>学历学位：本科</span>
+            <span class="title">所获证书</span>
+            <span>英语四级</span>
+            <span>计算机二级（C 语言）</span>
+        </div>
+        <button>点击下载 PDF</button>
+    </div>
+    <script src="//at.alicdn.com/t/font_1391047_hs3f8hdwthw.js"></script>
+</body>
+
+</html>
