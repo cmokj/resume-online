@@ -48,26 +48,26 @@
             align-items: center;
         }
 
-        .communication-wrapper>.name {
+        .communication-wrapper > .name {
             text-align: center;
             margin-bottom: 20px;
         }
 
-        .communication-wrapper>.name>h2 {
+        .communication-wrapper > .name > h2 {
             margin-bottom: 10px;
         }
 
-        .communication-wrapper>.communications>.row>span {
+        .communication-wrapper > .communications > .row > span {
             display: inline-block;
             width: 250px;
             vertical-align: middle;
         }
 
-        .communication-wrapper>.communications>.row>span>svg {
+        .communication-wrapper > .communications > .row > span > svg {
             margin-right: 5px;
         }
 
-        .sideBar {
+        main > .sideBar {
             background-color: #fbd12a;
             position: fixed;
             left: 30px;
@@ -81,34 +81,33 @@
             align-items: center;
         }
 
-        .sideBar>.pic {
+        main > .sideBar > .pic > img {
             width: 150px;
             height: 150px;
-            border: 1px solid;
         }
 
-        .sideBar>.personalInformation {
+        main > .sideBar > .personalInformation {
             display: flex;
             flex-direction: column;
         }
 
-        .sideBar>.personalInformation>.title {
+        main > .sideBar > .personalInformation > .title {
             font-weight: bold;
             margin-top: 20px;
         }
 
-        .sideBar>.personalInformation>span:not(.title) {
+        main > .sideBar > .personalInformation > span:not(.title) {
             margin-left: 2em;
         }
 
-        .sideBar>button {
+        main > .sideBar > button {
             background-color: #e6e6e6;
             padding: 5px 10px;
             margin-top: 50px;
             border-radius: 5px;
         }
 
-        .sideBar>button:hover {
+        main > .sideBar > button:hover {
             cursor: pointer;
         }
 
@@ -117,34 +116,43 @@
             margin-left: 320px;
         }
 
-        main>.skills>h2 {
+        main > .skills > h2 {
             margin-top: 50px;
         }
 
-        main>.skills>svg {
+        main > .skills > .project > h2 {
+            margin-top: 50px;
+        }
+
+        main > .skills > svg {
             margin-top: 50px;
             color: #14A697;
         }
 
-        main>.skills>p {
+        main > .skills > .project > div > svg {
+            margin-top: 50px;
+            color: #14A697;
+        }
+
+        main > .skills > p {
             margin-left: 2em;
         }
 
-        main>.skills>div>svg {
-            color: #14A697;
+        main > .skills > .project > div > p {
+            margin-left: 2em;
         }
 
-        main>.skills>div>.pic {
+        main > .skills > div > .pic {
             display: flex;
             justify-content: center;
             margin: 0;
         }
 
-        main>.skills>div>svg {
+        main > .skills > div > svg {
             margin-top: 50px;
         }
 
-        main>.skills>div>img {
+        main > .skills > div > img {
             display: block;
             margin-top: 30px;
             margin-bottom: 30px;
@@ -152,77 +160,136 @@
             transform: translateX(-50%);
         }
 
-        main>.skills>div>.keywords>span {
+        main > .skills > .project > div > img {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        main > .skills > div > .keywords > span {
             background-color: #e6e6e6;
+        }
+
+        main > .skills > .project > div > .keywords > span {
+            background-color: #e6e6e6;
+        }
+
+        @media print {
+            header {
+                margin: 50px 0 80px 0;
+            }
+
+            main > .sideBar {
+                position: absolute;
+                top: 310px;
+                transform: translateY(0);
+            }
+
+            main > .sideBar > button {
+                display: none;
+            }
+
+            main > .skills > .project {
+                margin-top: 240px;
+            }
+
+            main > .skills > .project {
+                margin-left: -320px;
+            }
+
+            main > .skills > .project > .chopper {
+                margin-top: 90px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <div class="communication-wrapper">
-            <div class="name">
-                <h2>陈敏佳</h2>
-                <span>求职意向：前端工程师</span>
-            </div>
-            <div class="communications">
-                <div class="row">
+<header>
+    <div class="communication-wrapper">
+        <div class="name">
+            <h2>陈敏佳</h2>
+            <span>求职意向：前端工程师</span>
+        </div>
+        <div class="communications">
+            <div class="row">
                     <span>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#i-email"></use>
                         </svg>
-                        <span>314081655@qq.com</span>
                     </span>
-                    <span>
+                <span>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#i-phone"></use>
                         </svg>
-                        <span>17826836096</span>
                     </span>
-                </div>
-                <div class="row">
+            </div>
+            <div class="row">
                     <span>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#i-github"></use>
                         </svg>
                         <a href="http://github.com/cmokj">https://github.com/cmokj</a>
                     </span>
-                    <span>
+                <span>
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#i-blog"></use>
                         </svg>
                         <a href="https://cmokj.github.io">https://cmokj.github.io</a>
                     </span>
-                </div>
             </div>
         </div>
-    </header>
-    <main>
-        <div class="skills">
-            <h2>技能描述</h2>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#i-item"></use>
-            </svg>
-            <span class="title">移动端页面</span>
-            <p>▫ 会使用 REM、媒体查询和 vw/vh 等技术制作适配手机的页面</p>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#i-item"></use>
-            </svg>
-            <span class="title">React</span>
-            <p>▫ 有使用 React 独立开发项目的经验，理解组件、生命周期、虚拟 DOM 等概念,掌握 React 实现组件通信的方式。</p>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#i-item"></use>
-            </svg>
-            <span class="title">HTML5 & CSS3 & JavaScript</span>
-            <p>▫ 掌握 HTML 语义化标签，如 nav、canvas 和 time 等</p>
-            <p>▫ 掌握 CSS3 动画、过渡、弹性盒子布局和媒体查询等响应式常用技术</p>
-            <p>▫ 能使用原生 JS 独立制作网页</p>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#i-item"></use>
-            </svg>
-            <span class="title">其他</span>
-            <p>▫ 掌握 HTTP 协议，了解浏览器缓存机制</p>
-            <p>▫ 了解 Webpack 基本配置</p>
+    </div>
+</header>
+<main>
+    <div class="sideBar">
+        <div class="pic">
+        </div>
+        <div class="personalInformation">
+            <span class="title">个人信息</span>
+            <span>姓&emsp;&emsp;名：陈敏佳</span>
+            <span>性&emsp;&emsp;别：女</span>
+            <span>籍&emsp;&emsp;贯：浙江绍兴</span>
+            <span>出生年月：1996年7月</span>
+            <span class="title">教育背景</span>
+            <span>学校名称：浙江传媒学院</span>
+            <span>所学专业：广播电视工程</span>
+            <span>就读时间：2014年9月-2018年6月</span>
+            <span>学历学位：本科</span>
+            <span class="title">所获证书</span>
+            <span>英语四级</span>
+            <span>计算机二级（C 语言）</span>
+        </div>
+        <button id="download">点击下载 PDF</button>
+    </div>
+    <div class="skills">
+        <h2>技能描述</h2>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#i-item"></use>
+        </svg>
+        <span class="title">移动端页面</span>
+        <p>▫ 会使用 REM、媒体查询和 vw/vh 等技术制作适配手机的页面</p>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#i-item"></use>
+        </svg>
+        <span class="title">React</span>
+        <p>▫ 有使用 React 独立开发项目的经验，理解组件、生命周期、虚拟 DOM 等概念,掌握 React 实现组件通信的方式。</p>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#i-item"></use>
+        </svg>
+        <span class="title">HTML5 & CSS3 & JavaScript</span>
+        <p>▫ 掌握 HTML 语义化标签，如 nav、canvas 和 time 等</p>
+        <p>▫ 掌握 CSS3 动画、过渡、弹性盒子布局和媒体查询等响应式常用技术</p>
+        <p>▫ 能使用原生 JS 独立制作网页</p>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#i-item"></use>
+        </svg>
+        <span class="title">其他</span>
+        <p>▫ 掌握 HTTP 协议，了解浏览器缓存机制</p>
+        <p>▫ 了解 Webpack 基本配置</p>
+        <div class="project">
             <h2>项目经验</h2>
             <div class="todoList">
                 <svg class="icon" aria-hidden="true">
@@ -300,27 +367,32 @@
                 <p>项目描述：这个项目制作是一个可以用于首页的导航网页，用户可以通过键盘按键直接跳转到对应网页，并且可以任意修改添加网址。</p>
             </div>
         </div>
-    </main>
-    <div class="sideBar">
-        <div class="pic">照片占位</div>
-        <div class="personalInformation">
-            <span class="title">个人信息</span>
-            <span>姓&emsp;&emsp;名：陈敏佳</span>
-            <span>性&emsp;&emsp;别：女</span>
-            <span>籍&emsp;&emsp;贯：浙江绍兴</span>
-            <span>出生年月：1996年7月</span>
-            <span class="title">教育背景</span>
-            <span>学校名称：浙江传媒学院</span>
-            <span>所学专业：广播电视工程</span>
-            <span>就读时间：2014年9月-2018年6月</span>
-            <span>学历学位：本科</span>
-            <span class="title">所获证书</span>
-            <span>英语四级</span>
-            <span>计算机二级（C 语言）</span>
-        </div>
-        <button>点击下载 PDF</button>
     </div>
-    <script src="//at.alicdn.com/t/font_1391047_hs3f8hdwthw.js"></script>
+</main>
+<script src="//at.alicdn.com/t/font_1391047_hs3f8hdwthw.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
+<script>
+    document.getElementById('download').onclick = function () {
+        console.log(1)
+        // 三个参数，第一个方向，第二个尺寸，第三个尺寸格式
+        var doc = new jsPDF('landscape', 'pt', [205, 155])
+
+        // 将图片转化为dataUrl
+        var imageData = 'data:image/png;base64,iVBORw0KGgo...';
+
+        //设置字体大小
+        doc.setFontSize(20);
+
+        //10,20这两参数控制文字距离左边，与上边的距离
+        doc.text('Stone', 10, 20);
+
+        // 0, 40, 控制文字距离左边，与上边的距离
+        doc.addImage(imageData, 'PNG', 0, 40, 205, 115);
+        doc.save('a4.pdf')
+    }
+</script>
 </body>
 
 </html>
